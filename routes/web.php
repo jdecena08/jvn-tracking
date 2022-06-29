@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,10 +35,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/home', function () {
-    return view("landing_page");
-});
-
-Route::get('/track-and-trace', function () {
-    return view("track_and_trace");
-});
+Route::get('home', [MainController::class, 'index'])->name('home');
+Route::get('track-and-trace', [MainController::class, 'track_and_trace'])->name('track-and-trace');
+Route::get('transaction-history', [MainController::class, 'transaction_history'])->name('transaction-history');
+Route::get('about-us', [MainController::class, 'about_us'])->name('about-us');
+Route::get('help-page', [MainController::class, 'help_page'])->name('help-page');

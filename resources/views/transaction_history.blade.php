@@ -64,17 +64,59 @@
     <div class="flex flex-col justify-center items-center pt-20 w-full">
         <div class="flex flex-col justify-center items-center pt-10 w-3/4 gap-8">
             <!--content-->
-            <div class="flex flex-row justify-center items-center px-4 py-2 text-neutral-800 w-full gap-4">
-                <input type="text" id="ticket-no" placeholder="Input Ticket Number" class="px-4 py-2 border border-emerald-600 rounded-md focus:outline-none">
+            <div class="pt-20"></div>
 
-                <button class="px-4 py-2 text-center text-neutral-200 font-semibold bg-emerald-600 hover:bg-emerald-400 rounded-md w-1/12">Track</button>
-            </div>
+            <table class="text-center font-medium border border-emerald-800 w-full">
+                <thead>
+                    <tr class="bg-emerald-600 text-neutral-200">
+                        <th class="px-2 py-1 border border-emerald-700">Date Issued</th>
+                        <th class="px-2 py-1 border border-emerald-700">Ticket Number</th>
+                        <th class="px-2 py-1 border border-emerald-700">Ticket</th>
+                        <th class="px-2 py-1 border border-emerald-700">Travel Info</th>
+                    </tr>
+                </thead>
 
-            <div class="flex justify-center items-center w-full">
-                <div id="map" class="w-full mx-1 border-2 border-gray-300" style="height: 600px"></div>
-            </div>
+                <tbody class="bg-neutral-200">
+                    <tr>
+                        <td class="px-2 py-1 border border-emerald-700">15 Jun 2022</td>
+                        <td class="px-2 py-1 border border-emerald-700">123456abcde</td>
+                        <td class="px-2 py-1 border border-emerald-700">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-500 underline underline-offset-1">View Ticket</a>
+                        </td>
+                        <td class="px-2 py-1 border border-emerald-700">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-500 underline underline-offset-1">View Travel Info</a>
+                        </td>
+                    </tr>
 
-            <div class="py-96"></div>
+                    <tr>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                    </tr>
+
+                    <tr>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                        <td class="px-2 py-1 border border-emerald-700">-</td>
+                    </tr>
+                </tbody>
+            </table>
             <!--content ends here-->
         </div>
     </div>
@@ -97,14 +139,7 @@
     });
 
     jQuery(document).ready(function() {
-        $("#track-trace").css('color', '#4ade80');
-    });
-
-    var mymap = new GMaps({
-      el: '#map',
-      lat: 14.1416642,
-      lng: 121.218359,
-      zoom:12
+        $("#transaction").css('color', '#4ade80');
     });
 </script>
 <!--script ends here-->

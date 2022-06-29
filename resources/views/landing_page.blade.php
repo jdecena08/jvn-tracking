@@ -11,10 +11,14 @@
             background-color: #059669;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
         }
+
+        .diagonal-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23059669' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+        }
     </style>
 
 </head>
-<body class="justify-center items-center w-full scroll-smooth">
+<body class="justify-center items-center w-full scroll-smooth diagonal-bg">
     <!--header-->
     <header class="flex flex-col text-base fixed top-0 z-50 w-full">
         <div class="flex flex-row justify-between px-4 py-2 text-sm bg-neutral-200 h-11">
@@ -36,11 +40,11 @@
                 <span class="text-left text-neutral-200 font-bold">JVN Tracking</span>
             </div>
             <div class="flex flex-row justify-center items-center gap-4">
-                <a href="#" id="book" class="text-left text-neutral-200 hover:text-green-400 font-bold">Book</a>
-                <a href="#" id="track-trace" class="text-left text-neutral-200 hover:text-green-400 font-bold">Track & Trace</a>
-                <a href="#" id="transaction" class="text-left text-neutral-200 hover:text-green-400 font-bold">Transaction History</a>
-                <a href="#" id="about-us" class="text-left text-neutral-200 hover:text-green-400 font-bold">About Us</a>
-                <a href="#" id="help" class="text-left text-neutral-200 hover:text-green-400 font-bold">Help</a>
+                <a href="{{route('home')}}" id="book" class="text-left text-neutral-200 hover:text-green-400 font-bold">Book</a>
+                <a href="{{route('track-and-trace')}}" id="track-trace" class="text-left text-neutral-200 hover:text-green-400 font-bold">Track & Trace</a>
+                <a href="{{route('transaction-history')}}" id="transaction" class="text-left text-neutral-200 hover:text-green-400 font-bold">Transaction History</a>
+                <a href="{{route('about-us')}}" id="about-us" class="text-left text-neutral-200 hover:text-green-400 font-bold">About Us</a>
+                <a href="{{route('help-page')}}" id="help" class="text-left text-neutral-200 hover:text-green-400 font-bold">Help</a>
             </div>
             <div class="flex flex-row justify-center items-center gap-4">
                 <a href="#" class="text-left text-neutral-200 hover:text-green-400 font-semibold" id="about-us">Login</a>
@@ -53,12 +57,12 @@
     <div class="flex flex-col justify-center items-center pt-20 w-full">
         <div class="flex flex-col justify-center items-center pt-2 w-full">
             <!--content-->
-            <div class="flex justify-center items-center pt-2 mt-20">
-                <img src="{{asset('media/img/sample-3.png')}}" alt="samp">
+            <div class="flex justify-center items-center">
+                <img src="{{asset('media/img/sample-6.png')}}" alt="samp">
             </div>
 
             <div class="px-4 py-2 mt-8 w-full">
-                <div class="flex flex-row justify-center items-center px-4 py-2 bg-emerald-600 rounded-md gap-2">
+                <div class="flex flex-row justify-center items-center px-4 py-2 dotted-bg rounded-md gap-2">
                     <div class="flex flex-row w-full">
                         <div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-1/2">
                             <label for="origin" class="text-left text-sm text-emerald-600 font-medium">Origin</label>

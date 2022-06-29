@@ -64,17 +64,19 @@
     <div class="flex flex-col justify-center items-center pt-20 w-full">
         <div class="flex flex-col justify-center items-center pt-10 w-3/4 gap-8">
             <!--content-->
-            <div class="flex flex-row justify-center items-center px-4 py-2 text-neutral-800 w-full gap-4">
-                <input type="text" id="ticket-no" placeholder="Input Ticket Number" class="px-4 py-2 border border-emerald-600 rounded-md focus:outline-none">
+            <img src="{{asset('media/img/sample-5.png')}}" alt="vans" class="w-full">
 
-                <button class="px-4 py-2 text-center text-neutral-200 font-semibold bg-emerald-600 hover:bg-emerald-400 rounded-md w-1/12">Track</button>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure!</p>
             </div>
 
-            <div class="flex justify-center items-center w-full">
-                <div id="map" class="w-full mx-1 border-2 border-gray-300" style="height: 600px"></div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure!</p>
             </div>
 
-            <div class="py-96"></div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure!</p>
+            </div>
             <!--content ends here-->
         </div>
     </div>
@@ -97,14 +99,7 @@
     });
 
     jQuery(document).ready(function() {
-        $("#track-trace").css('color', '#4ade80');
-    });
-
-    var mymap = new GMaps({
-      el: '#map',
-      lat: 14.1416642,
-      lng: 121.218359,
-      zoom:12
+        $("#about-us").css('color', '#4ade80');
     });
 </script>
 <!--script ends here-->
