@@ -37,3 +37,7 @@ Route::middleware([
 Route::get('/home', function () {
     return view("landing_page");
 });
+
+Route::get('/track-and-trace', function () {
+    return view("track_and_trace");
+});
