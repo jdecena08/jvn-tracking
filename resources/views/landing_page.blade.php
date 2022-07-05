@@ -86,7 +86,7 @@
                         </div>
                         <div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-1/2">
                             <label for="origin" class="text-left text-sm text-emerald-600 font-medium">Destination</label>
-                            <input type="text" placeholder="Input Destination" id="origin" class="bg-neutral-200 focus:outline-none">
+                            <input type="text" placeholder="Input Destination" id="destination" class="bg-neutral-200 focus:outline-none">
                         </div>
                     </div>
 
@@ -152,6 +152,9 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRtsrdb3br7r1XNqRL2F-IGyDVCYw2S3k&libraries=places"></script>
+
+
 <script>
     jQuery(document).ready(function() {
         jQuery(document).on("scroll", function() {
@@ -187,6 +190,20 @@
         else {
             $('#bookbtn').css('display', 'none');
         }
+    })
+
+    var origin = new google.maps.places.Autocomplete(document.getElementById('origin'))
+    origin.setFields(['place_id', 'name', 'address_components', 'geometry'])
+    origin.addListener('place_changed', function() {
+        const place = origin.getPlace()
+        const components = place.address_components
+    })
+
+    var destination = new google.maps.places.Autocomplete(document.getElementById('destination'))
+    destination.setFields(['place_id', 'name', 'address_components', 'geometry'])
+    destination.addListener('place_changed', function() {
+        const place = destination.getPlace()
+        const components = place.address_components
     })
 
 </script>
