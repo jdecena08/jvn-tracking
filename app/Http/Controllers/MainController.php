@@ -30,4 +30,15 @@ class MainController extends Controller
         $data = array();
         return view('help_page', $data);
     }
+
+    public function admin_dashboard() {
+        $data = array();
+        return view('admin_dashboard', $data);
+    }
+
+    public function driver_records() {
+        $data = array();
+        return view('admin_driver_records', $data);
+    }
+
 }

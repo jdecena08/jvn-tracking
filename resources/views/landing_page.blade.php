@@ -13,7 +13,7 @@
         }
 
         .diagonal-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23059669' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23059669' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
 
@@ -47,13 +47,26 @@
                 <a href="{{route('help-page')}}" id="help" class="text-left text-neutral-200 hover:text-green-400 font-bold">Help</a>
             </div>
             <div class="flex flex-row justify-center items-center gap-4">
-                <a href="#" class="text-left text-neutral-200 hover:text-green-400 font-semibold" id="about-us">Login</a>
-                <a href="#" class="text-left text-neutral-200 hover:text-green-400 font-semibold" id="about-us">Sign Up</a>
+                @if(auth()->user())
+                    <a href="#" class="text-left text-neutral-200 hover:text-green-400 font-semibold" id="about-us">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-left text-neutral-200 hover:text-green-400 font-semibold" id="about-us" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                    </form>
+                @else
+                    <a href="{{route('login')}}" class="text-left text-neutral-200 hover:text-green-400 font-semibold" id="about-us">Login</a>
+                    <a href="{{route('register')}}" class="text-left text-neutral-200 hover:text-green-400 font-semibold" id="about-us">Sign Up</a>
+
+                @endif
             </div>
         </div>
     </header>
     <!--header ends here-->
-    
+
     <div class="flex flex-col justify-center items-center pt-20 w-full">
         <div class="flex flex-col justify-center items-center pt-2 w-full">
             <!--content-->
@@ -77,7 +90,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-1/2">
                         <label for="no-of-passengers">No. of Passengers</label>
                         <select name="no-of-passengers" id="no-of-passengers" class="focus:outline-none">
@@ -96,7 +109,7 @@
                             <option value="12">12</option>
                         </select>
                     </div>
-                    
+
 
                     <div class="flex flex-row w-full">
                         <div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-1/2">
@@ -148,7 +161,7 @@
             else {
                 $("#header_frame").css('opacity', '1');
             }
-            
+
         })
     });
 
@@ -168,12 +181,12 @@
 
         $('#pax_info_container').html(html);
         if(val > 0)
-        {    
+        {
             $('#bookbtn').css('display', 'block');
         }
         else {
             $('#bookbtn').css('display', 'none');
-        } 
+        }
     })
 
 </script>
