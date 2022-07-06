@@ -26,7 +26,7 @@
 </head>
 <body class="flex flex-row justify-center items-center diagonal-bg w-full h-full scroll-smooth">
     <!--content-->
-    <div class="flex justify-center items-center w-full">
+    <div class="flex justify-center items-center w-full h-full">
         <nav class="flex-1 px-2 justify-left items-center text-center w-64 dotted-bg shadow-md divide-y divide-neutral-200 h-screen fixed left-0 top-0">
             <div class="flex justify-between px-4 py-6 items-center text-xl font-semibold text-neutral-200 gap-3">
                 <div>{{config('app.name')}}</div>
@@ -61,24 +61,76 @@
             </div>
         </nav>
 
-        <div class="flex flex-col justify-center items-center ml-64 w-full">
+        <div class="flex flex-col justify-center items-center ml-64 w-full h-full">
 
             <div class="flex flex-col justify-center items-center mt-8 w-3/4 gap-4">
-                <div class="flex flex-row justify-center items-center px-4 py-2 text-neutral-800 w-full gap-4">
-                    <input type="text" id="ticket-no" placeholder="Input Ticket Number" class="px-4 py-2 border border-emerald-600 rounded-md focus:outline-none">
+                <table class="text-center font-medium w-full">
+                    <thead>
+                        <tr class="dotted-bg text-neutral-200">
+                            <th class="px-2 py-1 rounded-tl-lg">Date Issued</th>
+                            <th class="px-2 py-1">Ticket Number</th>
+                            <th class="px-2 py-1">Tricket</th>
+                            <th rowspan="2" class="px-2 py-1 w-2/12">Travel Information</th>
+                            <th class="px-2 py-1 rounded-tr-lg">Status</th>
+                        </tr>
+                    </thead>
 
-                    <button class="px-4 py-2 text-center text-neutral-200 font-semibold bg-emerald-600 hover:bg-emerald-400 rounded-md w-1/12">Track</button>
-                </div>
+                    <tbody class="text-neutral-900 bg-white divide-y divide-emerald-600">
+                        <tr>
+                            <td class="px-2 py-1">15 Jun 2022</td>
+                            <td class="px-2 py-1">123456abcdef</td>
+                            <td>
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Ticket</a>
+                            </td>
+                            <td class="px-2 py-1">
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Travel Info</a>
+                            </td>
+                            <td class="px-2 py-1 text-green-600">Completed</td>
+                        </tr>
 
-                <div class="flex justify-center items-center w-full">
-                    <div id="map" class="w-full mx-1 border-2 border-gray-300" style="height: 500px"></div>
-                </div>
+                        <tr>
+                            <td class="px-2 py-1">17 Jun 2022</td>
+                            <td class="px-2 py-1">321654dbafed</td>
+                            <td>
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Ticket</a>
+                            </td>
+                            <td class="px-2 py-1">
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Travel Info</a>
+                            </td>
+                            <td class="px-2 py-1 text-blue-600">Active</td>
+                        </tr>
 
+                        <tr>
+                            <td class="px-2 py-1">23 Jun 2022</td>
+                            <td class="px-2 py-1">456123defabc</td>
+                            <td>
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Ticket</a>
+                            </td>
+                            <td class="px-2 py-1">
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Travel Info</a>
+                            </td>
+                            <td class="px-2 py-1 text-yellow-400">Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-2 py-1 rounded-bl-lg">29 Jun 2022</td>
+                            <td class="px-2 py-1">654321fedcba</td>
+                            <td>
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Ticket</a>
+                            </td>
+                            <td class="px-2 py-1">
+                                <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Travel Info</a>
+                            </td>
+                            <td class="px-2 py-1 text-red-600 rounded-br-lg">Cancelled</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <div class="pt-96"></div>
             </div>
         </div>
     </div>
-
-    <div class="pt-20"></div>
     <!--content ends here-->
 </body>
 
@@ -87,15 +139,9 @@
 
 <script>
     jQuery(document).ready(function() {
-        $("#vehicle-tracking").css('background-color', '#4ade80');
+        $("#trip-tickets").css('background-color', '#4ade80');
     });
 
-    var mymap = new GMaps({
-      el: '#map',
-      lat: 14.1416642,
-      lng: 121.218359,
-      zoom:12
-    });
 </script>
 <!--script ends here-->
 </html>

@@ -202,7 +202,7 @@
     var destination = new google.maps.places.Autocomplete(document.getElementById('destination'))
     destination.setFields(['place_id', 'name', 'address_components', 'geometry'])
     destination.addListener('place_changed', function() {
-        const place = destination.getPlace()
+        const place = destination   .getPlace()
         const components = place.address_components
     })
 
