@@ -81,7 +81,7 @@
                         <td class="px-2 py-1 border border-emerald-700">15 Jun 2022</td>
                         <td class="px-2 py-1 border border-emerald-700">123456abcde</td>
                         <td class="px-2 py-1 border border-emerald-700">
-                            <a href="#" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Ticket</a>
+                            <a href="{{route('ticket-page')}}" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Ticket</a>
                         </td>
                         <td class="px-2 py-1 border border-emerald-700">
                             <a href="#" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Travel Info</a>

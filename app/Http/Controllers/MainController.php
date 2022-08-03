@@ -36,4 +36,9 @@ class MainController extends Controller
         return view('payment_options', $data);
     }
 
+    public function ticket_page() {
+        $data = array();
+        return view('ticket_page', $data);
+    }
+
 }

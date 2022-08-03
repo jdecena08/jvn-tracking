@@ -141,7 +141,7 @@
             </div>
 
             <div class="flex items-center justify-end px-4 py-2 mt-6 w-full">
-                <button id="bookbtn" class="hidden text-center font-semibold px-4 py-2 text-neutral-200 bg-emerald-600 hover:bg-emerald-400 rounded-md w-1/12">Book</button>
+                <a href="{{route('payment-options')}}" id="bookbtn" class="hidden text-center font-semibold px-4 py-2 text-neutral-200 bg-emerald-600 hover:bg-emerald-400 rounded-md w-1/12">Book</a>
             </div>
 
             <div class="py-96"></div>
