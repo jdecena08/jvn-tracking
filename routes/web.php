@@ -27,6 +27,7 @@ Route::get('/dashboard', [MainController::class, 'index']);
 
 Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('track-and-trace', [MainController::class, 'track_and_trace'])->name('track-and-trace');
+Route::get('payment-options', [MainController::class, 'payment_options'])->name('payment-options');
 Route::get('transaction-history', [MainController::class, 'transaction_history'])->name('transaction-history');
 Route::get('about-us', [MainController::class, 'about_us'])->name('about-us');
 Route::get('help-page', [MainController::class, 'help_page'])->name('help-page');

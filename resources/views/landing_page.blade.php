@@ -37,7 +37,7 @@
 
         <div class="flex flex-row justify-between px-4 py-2 dotted-bg h-11" id="header_frame">
             <div class="flex flex-row justify-center items-center">
-                <span class="text-left text-neutral-200 font-bold">JVN Tracking</span>
+                <a href="{{route('home')}}" class="text-left text-neutral-200 font-bold">JVN Tracking</a>
             </div>
             <div class="flex flex-row justify-center items-center gap-4">
                 <a href="{{route('home')}}" id="book" class="text-left text-neutral-200 hover:text-green-400 font-bold">Book</a>

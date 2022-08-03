@@ -31,4 +31,9 @@ class MainController extends Controller
         return view('help_page', $data);
     }
 
+    public function payment_options() {
+        $data = array();
+        return view('payment_options', $data);
+    }
+
 }

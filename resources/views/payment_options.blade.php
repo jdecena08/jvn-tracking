@@ -46,7 +46,7 @@
                 <a href="{{route('home')}}" class="text-left text-neutral-200 font-bold">JVN Tracking</a>
             </div>
             <div class="flex flex-row justify-center items-center gap-4">
-            <a href="{{route('home')}}" id="book" class="text-left text-neutral-200 hover:text-green-400 font-bold">Book</a>
+                <a href="{{route('home')}}" id="book" class="text-left text-neutral-200 hover:text-green-400 font-bold">Book</a>
                 <a href="{{route('track-and-trace')}}" id="track-trace" class="text-left text-neutral-200 hover:text-green-400 font-bold">Track & Trace</a>
                 <a href="{{route('transaction-history')}}" id="transaction" class="text-left text-neutral-200 hover:text-green-400 font-bold">Transaction History</a>
                 <a href="{{route('about-us')}}" id="about-us" class="text-left text-neutral-200 hover:text-green-400 font-bold">About Us</a>
@@ -64,17 +64,16 @@
     <div class="flex flex-col justify-center items-center pt-20 w-full">
         <div class="flex flex-col justify-center items-center pt-10 w-3/4 gap-8">
             <!--content-->
-            <div class="flex flex-row justify-center items-center px-4 py-2 text-neutral-800 w-full gap-4">
-                <input type="text" id="ticket-no" placeholder="Input Ticket Number" class="px-4 py-2 border border-emerald-600 rounded-md focus:outline-none">
-
-                <button class="px-4 py-2 text-center text-neutral-200 font-semibold bg-emerald-600 hover:bg-emerald-400 rounded-md w-1/12">Track</button>
+            <div class="flex flex-col justify-center items-center text-center w-full gap-2">
+                <span class="text-base font-semibold">Amount to pay</span>
+                <span class="text-3xl font-bold text-emerald-600">300php</span>
             </div>
 
-            <div class="flex justify-center items-center w-full">
-                <div id="map" class="w-full mx-1 border-2 border-neutral-200" style="height: 600px"></div>
+            <div class="flex flex-col sm:flex-row justify-center items-center text-center w-full gap-4">
+                <img class="w-8/12 sm:w-3/12 rounded-md" src="{{asset('media/img/payment-gcash.png')}}" alt="gcash">
+                <img class="w-8/12 sm:w-3/12 rounded-md" src="{{asset('media/img/payment-paymaya.png')}}" alt="paymaya">
+                <img class="w-8/12 sm:w-3/12 rounded-md" src="{{asset('media/img/payment-coinsph.png')}}" alt="coinsph">
             </div>
-
-            <div class="py-96"></div>
             <!--content ends here-->
         </div>
     </div>
@@ -97,14 +96,7 @@
     });
 
     jQuery(document).ready(function() {
-        $("#track-trace").css('color', '#4ade80');
-    });
-
-    var mymap = new GMaps({
-      el: '#map',
-      lat: 14.1416642,
-      lng: 121.218359,
-      zoom:12
+        $("#book").css('color', '#4ade80');
     });
 </script>
 <!--script ends here-->
