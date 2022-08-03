@@ -74,7 +74,7 @@
                 <div id="map" class="w-full mx-1 border-2 border-neutral-200" style="height: 600px"></div>
             </div>
 
-            <div class="py-96"></div>
+            <div class="py-20"></div>
             <!--content ends here-->
         </div>
     </div>
