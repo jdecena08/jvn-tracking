@@ -8,7 +8,7 @@ class MainController extends Controller
 {
     public function index() {
         $data = array();
-        return view('landing_page', $data);
+        return view('authenticated-user.contents.landing_page', $data);
     }
 
     public function track_and_trace() {
