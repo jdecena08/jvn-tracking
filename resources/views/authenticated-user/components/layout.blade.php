@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('page-title')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    @yield('map-script')
 
     <style>
         .dotted-bg {
@@ -23,7 +24,7 @@
 </head>
 <body class="justify-center items-center w-full scroll-smooth diagonal-bg">
     
-    @yield('head')
+    @include('authenticated-user.components.head')
     @yield('content')
 
     <div class="py-20"></div>
