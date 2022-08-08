@@ -14,9 +14,15 @@
         </div>
 
         <div class="flex flex-col sm:flex-row justify-center items-center text-center w-full gap-4">
-            <img class="w-8/12 sm:w-3/12 rounded-md hover:opacity-80" src="{{asset('media/img/payment-gcash.png')}}" alt="gcash">
-            <img class="w-8/12 sm:w-3/12 rounded-md hover:opacity-80" src="{{asset('media/img/payment-paymaya.png')}}" alt="paymaya">
-            <img class="w-8/12 sm:w-3/12 rounded-md hover:opacity-80" src="{{asset('media/img/payment-coinsph.png')}}" alt="coinsph">
+            <button class="w-8/12 sm:w-3/12 hover:opacity-90">
+                <img class="rounded-md" src="{{asset('media/img/payment-gcash.png')}}" alt="gcash">
+            </button>
+            <button class="w-8/12 sm:w-3/12 hover:opacity-90">
+                <img class="rounded-md" src="{{asset('media/img/payment-paymaya.png')}}" alt="paymaya">
+            </button>
+            <button class="w-8/12 sm:w-3/12 hover:opacity-90">
+                <img class="rounded-md" src="{{asset('media/img/payment-coinsph.png')}}" alt="coinsph">
+            </button>
         </div>
         <!--content ends here-->
     </div>

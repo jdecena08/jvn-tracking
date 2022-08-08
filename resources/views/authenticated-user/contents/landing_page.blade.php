@@ -14,9 +14,10 @@
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide-to="0"
-                class="active"
+                class="active rounded-full bg-neutral-600 bg-opacity-50"
                 aria-current="true"
-                aria-label="Slide 1"></button>
+                aria-label="Slide 1"
+                ></button>
                 <button
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
