@@ -9,12 +9,12 @@
 <div class="flex flex-col pt-11 w-full">
     <div class="flex flex-col pt-11 w-full">
         <div id="carouselExampleIndicators" class="carousel slide carousel-dark relative" data-bs-ride="carousel">
-            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-20">
                 <button
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide-to="0"
-                class="active rounded-full bg-neutral-600 bg-opacity-50"
+                class="active bg-opacity-50"
                 aria-current="true"
                 aria-label="Slide 1"
                 ></button>
@@ -31,31 +31,39 @@
                 aria-label="Slide 3"
                 ></button>
             </div>
-            <div class="carousel-inner relative w-full overflow-hidden">
+
+            <img
+                src="{{asset('media/img/1.png')}}"
+                class="absolute top-0 w-full z-10"
+                alt="frame"
+            />
+
+            <div class="carousel-inner relative w-full overflow-hidden ">
                 <div class="carousel-item active float-left w-full">
                     <img
-                        src="{{asset('media/img/1.png')}}"
+                        src="{{asset('media/img/2.png')}}"
                         class="block w-full"
                         alt="pagudpud"
                     />
                 </div>
                 <div class="carousel-item float-left w-full">
                     <img
-                        src="{{asset('media/img/2.png')}}"
+                        src="{{asset('media/img/3.png')}}"
                         class="block w-full"
                         alt="Camera"
                     />
                 </div>
                 <div class="carousel-item float-left w-full">
                     <img
-                        src="{{asset('media/img/3.png')}}"
+                        src="{{asset('media/img/4.png')}}"
                         class="block w-full"
                         alt="Exotic Fruits"
                     />
                 </div>
             </div>
+
             <button
-                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 z-20"
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev"
@@ -64,7 +72,7 @@
                 <span class="visually-hidden">Previous</span>
             </button>
             <button
-                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0 z-20"
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="next"
@@ -74,8 +82,8 @@
             </button>
         </div>
 
-        <div class="px-4 py-2 mt-2 w-full">
-            <div class="flex flex-col xl:flex-row justify-center items-center px-4 py-4 dotted-bg rounded-md gap-2 w-full">
+        <div class="px-4 py-4 w-full">
+            <div class="flex flex-col xl:flex-row justify-center items-center px-2 py-2 dotted-bg rounded-md gap-2 w-full">
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-2 w-full">
                     <div class="flex flex-col sm:flex-row justify-center items-center w-full sm:divide-x divide-emerald-600 gap-2 sm:gap-0">
                         <div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">
