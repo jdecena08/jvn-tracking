@@ -2,9 +2,6 @@
 @section('page-title')
 <title>{{config('app.name')}} - Track & Trace</title>
 @endsection
-@section('map-script')
-<script src="https://maps.google.com/maps/api/js"></script>
-@endsection
 @section('css')
 @endsection
 @section('content')
