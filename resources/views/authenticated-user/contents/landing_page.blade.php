@@ -40,23 +40,24 @@
 
             <div class="carousel-inner relative w-full overflow-hidden ">
                 <div class="carousel-item active float-left w-full">
-                    <video
-                        src="{{asset('media/vid/sample.mp4')}}"
+                    <img
+                        src="{{asset('media/img/2.png')}}"
                         class="block w-full"
-                    ></video>
+                        alt="1"
+                    />
                 </div>
                 <div class="carousel-item float-left w-full">
                     <img
                         src="{{asset('media/img/3.png')}}"
                         class="block w-full"
-                        alt="Camera"
+                        alt="2"
                     />
                 </div>
                 <div class="carousel-item float-left w-full">
                     <img
                         src="{{asset('media/img/4.png')}}"
                         class="block w-full"
-                        alt="Exotic Fruits"
+                        alt="3"
                     />
                 </div>
             </div>
