@@ -40,11 +40,10 @@
 
             <div class="carousel-inner relative w-full overflow-hidden ">
                 <div class="carousel-item active float-left w-full">
-                    <img
-                        src="{{asset('media/img/2.png')}}"
+                    <video
+                        src="{{asset('media/vid/sample.mp4')}}"
                         class="block w-full"
-                        alt="pagudpud"
-                    />
+                    ></video>
                 </div>
                 <div class="carousel-item float-left w-full">
                     <img
