@@ -9,7 +9,7 @@
 <div class="flex flex-col pt-11 w-full">
     <div class="flex flex-col pt-11 w-full">
         <div id="carouselExampleIndicators" class="carousel slide carousel-dark relative" data-bs-ride="carousel">
-            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-20">
+            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-[15]">
                 <button
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
@@ -63,7 +63,7 @@
             </div>
 
             <button
-                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 z-20"
+                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 z-[15]"
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev"
@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">
-                            <label for="origin" class="text-left text-sm text-emerald-600 font-medium">Destination</label>
+                            <label for="destination" class="text-left text-sm text-emerald-600 font-medium">Destination</label>
                             <input type="text" placeholder="Input Destination" id="destination" class="bg-neutral-200 focus:outline-none">
                         </div>
                     </div>

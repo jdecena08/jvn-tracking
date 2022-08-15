@@ -18,7 +18,7 @@
     <div class="flex flex-row justify-between px-4 py-2 dotted-bg h-11" id="header_frame">
         <div class="flex flex-row justify-center items-center">
             <a href="{{route('home')}}" class="hidden md:flex text-left text-white font-bold">JVN Tracking</a>
-            <button onclick="openSidebar()" id="menu-button" class="flex md:hidden">
+            <button onclick="toggleSidebar()" id="menu-button" class="flex md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
                 </svg>
@@ -53,19 +53,21 @@
 <!--header ends here-->
 
 <!--aside-->
-<aside class="hidden md:invisible flex-col justify-center items-center bg-black bg-opacity-20 min-h-screen tracking-widest fixed left-0 top-0 z-20 w-full shadow"
-id="bg-sidebar" onclick="openSidebar()">
-    <div class="bg-emerald-600 min-h-screen pt-11 w-0" id="sidebar">
+<div class="hidden md:invisible bg-black bg-opacity-20 w-full min-h-screen fixed top-0 bottom-0 left-0 right-0 z-30" id="bg-sidebar" onclick="toggleSidebar()"></div>
+
+<aside class="hidden md:invisible flex-col justify-center items-center min-h-screen tracking-widest fixed left-0 top-0 z-40 w-72 shadow"
+id="sidebar">
+    <div class="bg-emerald-600 min-h-screen pt-11 w-72">
         <div class="justify-center items-center text-center px-4 py-2 mt-11 w-full">
             <div class="font-semibold text-white text-xl">{{config('app.name')}}</div>
         </div>
 
         <div class="flex flex-col justify-center items-center py-2 font-small text-center text-sm font-bold text-white w-full divide-y divide-opacity-25 divide-white">
-            <a href="{{route('home')}}" id="book" class="px-4 py-2 text-center hover:text-green-400 font-bold w-full">Book</a>
-            <a href="{{route('track-and-trace')}}" id="track-trace" class="px-4 py-2 hover:text-green-400 font-bold w-full">Track & Trace</a>
-            <a href="{{route('transaction-history')}}" id="transaction" class="px-4 py-2 hover:text-green-400 font-bold w-full">Transaction History</a>
-            <a href="{{route('about-us')}}" id="about-us" class="px-4 py-2 hover:text-green-400 font-bold w-full">About Us</a>
-            <a href="{{route('help-page')}}" id="help" class="px-4 py-2 hover:text-green-400 font-bold w-full">Help</a>
+            <a href="{{route('home')}}" id="book" class="px-4 py-2 text-center hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Book</a>
+            <a href="{{route('track-and-trace')}}" id="track-trace" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Track & Trace</a>
+            <a href="{{route('transaction-history')}}" id="transaction" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Transaction History</a>
+            <a href="{{route('about-us')}}" id="about-us" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">About Us</a>
+            <a href="{{route('help-page')}}" id="help" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Help</a>
         </div>
     </div>
 </aside>
@@ -145,12 +147,12 @@ id="bg-sidebar" onclick="openSidebar()">
                 <div class="flex flex-row gap-2">
                     <div class="flex flex-col gap-2">
                         <label for="signup-agency-phone">Agency Phone Number</label>
-                        <input type="number" id="signup-agency-phone" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
+                        <input type="tel" id="signup-agency-phone" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
                     </div>
 
                     <div class="flex flex-col gap-2">
                         <label for="signup-agency-mobile">Mobile Number</label>
-                        <input type="number" id="signup-agency-mobile" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
+                        <input type="tel" id="signup-agency-mobile" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
                     </div>
                 </div>
 
@@ -190,3 +192,24 @@ id="bg-sidebar" onclick="openSidebar()">
         </div>
     </div>
 </div>
+
+<script>
+    jQuery(window).on('scroll', function() {
+        if(jQuery(window).scrollTop() > 0) {
+            jQuery('#header-frame').css('opacity', '0.8');
+        }
+        else {
+            jQuery('#header-frame').css('opacity', '1');
+        }
+    });
+
+    $(document).scroll(function() {})
+
+    function toggleSidebar() {
+        jQuery('#sidebar').animate({
+            width: 'toggle'
+        });
+
+        jQuery('#bg-sidebar').fadeToggle();
+    }
+</script>

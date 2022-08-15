@@ -6,7 +6,7 @@
 @endsection
 @section('content')
 <div class="flex flex-col justify-center items-center pt-20 w-full">
-    <div class="flex flex-col justify-center items-center pt-10 w-3/4 gap-8">
+    <div class="flex flex-col justify-center items-center pt-10 w-11/12 md:w-3/4 gap-8">
         <!--content-->
         <div class="flex flex-col justify-center items-center text-center w-full gap-2">
             <span class="text-base font-semibold">Amount to pay</span>

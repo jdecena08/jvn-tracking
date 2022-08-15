@@ -6,7 +6,7 @@
 @endsection
 @section('content')
 <div class="flex flex-col justify-center items-center pt-20 w-full">
-    <div class="flex flex-col justify-center items-center pt-10 w-3/4 gap-8">
+    <div class="flex flex-col justify-center items-center pt-10 w-11/12 md:w-3/4 gap-8">
         <!--content-->
         <img src="{{asset('media/img/sample-5.png')}}" alt="vans" class="w-full">
 

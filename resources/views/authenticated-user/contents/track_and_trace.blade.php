@@ -6,12 +6,12 @@
 @endsection
 @section('content')
 <div class="flex flex-col justify-center items-center pt-20 w-full">
-    <div class="flex flex-col justify-center items-center pt-10 w-3/4 gap-8">
+    <div class="flex flex-col justify-center items-center pt-10 w-11/12 md:w-3/4 gap-6">
         <!--content-->
-        <div class="flex flex-row justify-center items-center px-4 py-2 text-neutral-800 w-full gap-4">
-            <input type="text" id="ticket-no" placeholder="Input Ticket Number" class="px-4 py-2 border border-emerald-600 rounded-md focus:outline-none">
+        <div class="flex flex-row justify-center items-center px-2 text-neutral-800 w-full gap-4">
+            <input type="text" id="ticket-no" placeholder="Input Ticket Number" class="px-4 py-2 border border-emerald-600 rounded-md focus:outline-none w-full">
 
-            <button class="px-4 py-2 text-center text-neutral-200 font-semibold bg-emerald-600 hover:bg-emerald-400 rounded-md w-1/12">Track</button>
+            <button class="px-4 py-2 text-center text-neutral-200 font-semibold bg-emerald-600 hover:bg-emerald-400 rounded-md w-24">Track</button>
         </div>
 
         <div class="flex justify-center items-center w-full">
