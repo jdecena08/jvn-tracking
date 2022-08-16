@@ -59,7 +59,7 @@
 id="sidebar">
     <div class="bg-emerald-600 min-h-screen pt-11 w-72">
         <div class="justify-center items-center text-center px-4 py-2 mt-11 w-full">
-            <div class="font-semibold text-white text-xl">{{config('app.name')}}</div>
+            <a href="{{route('home')}}" class="font-semibold text-white text-xl">{{config('app.name')}}</a>
         </div>
 
         <div class="flex flex-col justify-center items-center py-2 font-small text-center text-sm font-bold text-white w-full divide-y divide-opacity-25 divide-white">
@@ -145,14 +145,14 @@ id="sidebar">
                 <input type="text" id="signup-agency-address" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
 
                 <div class="flex flex-row gap-2">
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 w-full">
                         <label for="signup-agency-phone">Agency Phone Number</label>
-                        <input type="tel" id="signup-agency-phone" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
+                        <input type="tel" id="signup-agency-phone" class="outline-none border border-emerald-600 rounded-md px-4 py-2 container">
                     </div>
 
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 w-full">
                         <label for="signup-agency-mobile">Mobile Number</label>
-                        <input type="tel" id="signup-agency-mobile" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
+                        <input type="tel" id="signup-agency-mobile" class="outline-none border border-emerald-600 rounded-md px-4 py-2 container">
                     </div>
                 </div>
 
@@ -160,14 +160,14 @@ id="sidebar">
                 <input type="text" id="signup-username" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
 
                 <div class="flex flex-row gap-2">
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 w-full">
                         <label for="signup-password">Password</label>
-                        <input type="password" id="signup-password" class="outline-none border border-emerald-600 focus:ring-green-400 focus:ring-4 focus:ring-opacity-50 rounded-md px-4 py-2">
+                        <input type="password" id="signup-password" class="outline-none border border-emerald-600 focus:ring-green-400 focus:ring-4 focus:ring-opacity-50 rounded-md px-4 py-2 container">
                     </div>
                     
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 w-full">
                         <label for="signup-confirm">Confirm Password</label>
-                        <input type="password" id="signup-confirm" class="outline-none border border-emerald-600 focus:ring-green-400 focus:ring-4 focus:ring-opacity-50 rounded-md px-4 py-2">
+                        <input type="password" id="signup-confirm" class="outline-none border border-emerald-600 focus:ring-green-400 focus:ring-4 focus:ring-opacity-50 rounded-md px-4 py-2 container">
                     </div>
                 </div>
             </div>
