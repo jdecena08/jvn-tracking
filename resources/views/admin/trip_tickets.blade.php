@@ -41,7 +41,7 @@
                     <td class="px-2 py-1">
                         <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Travel Info</a>
                     </td>
-                    <td class="px-2 py-1 text-blue-600">Active</td>
+                    <td class="px-2 py-1 text-blue-600">Dispatched</td>
                 </tr>
 
                 <tr>
@@ -53,7 +53,7 @@
                     <td class="px-2 py-1">
                         <a href="#" id="table-trip-number" class="text-blue-600 hover:text-blue-400 underline underline-offset-1">View Travel Info</a>
                     </td>
-                    <td class="px-2 py-1 text-yellow-400">Pending</td>
+                    <td class="px-2 py-1 text-orange-400">Reserved</td>
                 </tr>
 
                 <tr>

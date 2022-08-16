@@ -29,7 +29,6 @@
             <a href="{{route('track-and-trace')}}" id="track-trace" class="text-left text-white hover:text-green-400 font-bold">Track & Trace</a>
             <a href="{{route('transaction-history')}}" id="transaction" class="text-left text-white hover:text-green-400 font-bold">Transaction History</a>
             <a href="{{route('about-us')}}" id="about-us" class="text-left text-white hover:text-green-400 font-bold">About Us</a>
-            <a href="{{route('help-page')}}" id="help" class="text-left text-white hover:text-green-400 font-bold">Help</a>
         </div>
         <div class="flex flex-row justify-center items-center gap-4">
             @if(auth()->user())
@@ -186,7 +185,7 @@ id="sidebar">
                 </div>
                 <button type="button"
                 class="inline-block px-6 py-2.5 bg-emerald-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-400 hover:shadow-lg transition duration-150 ease-in-out ml-1">
-                Login
+                Sign Up
                 </button>
             </div>
         </div>
