@@ -85,9 +85,9 @@
         <div class="px-4 py-4 w-full">
             <div class="flex flex-col xl:flex-row justify-center items-start px-2 py-2 dotted-bg rounded-md gap-2 w-full">
                 <div class="flex flex-col sm:flex-row justify-center items-start gap-2 w-full">
-                    <div class="flex flex-col justify-center items-center gap-2 w-full">
-                        <div class="flex flex-col sm:flex-row justify-center items-center w-full sm:divide-x divide-emerald-600 gap-2 sm:gap-0"
-                        id="route-container">
+                    <div class="flex flex-col justify-center items-center gap-2 w-full"
+                    id="route_container">
+                        <div class="flex flex-col sm:flex-row justify-center items-center w-full sm:divide-x divide-emerald-600 gap-2 sm:gap-0">
                             <div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">
                                 <label for="origin" class="text-left text-sm text-emerald-600 font-medium">Origin</label>
                                 <input type="text" placeholder="Input Origin" id="origin" class="bg-neutral-200 focus:outline-none">
@@ -97,7 +97,7 @@
                                 <div class="flex flex-row justify-between items-center">
                                     <label for="destination" class="text-left text-sm text-emerald-600 font-medium">Destination</label>
                                     <button onclick="addRoute()">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-600 hover:text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-600 hover:text-emerald-400" viewBox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
                                         </svg>
                                     </button>
@@ -191,7 +191,27 @@
     })
 
     function addRoute() {
-        $('#route_container').html("");
+        $('#route_container').prepend('<div class="flex flex-col sm:flex-row justify-center items-center w-full sm:divide-x divide-emerald-600 gap-2 sm:gap-0" id="route">' +
+            '<div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">' +
+                '<label for="origin" class="text-left text-sm text-emerald-600 font-medium">Origin</label>' +
+                '<input type="text" placeholder="Input Origin" id="origin" class="bg-neutral-200 focus:outline-none">' +
+            '</div>' +
+            '<div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">' +
+                '<div class="flex flex-row justify-between items-center">' +
+                    '<label for="destination" class="text-left text-sm text-emerald-600 font-medium">Destination</label>' +
+                    '<button onclick="removeRoute()">' +
+                        '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600 hover:text-red-400" viewBox="0 0 20 20" fill="currentColor">' +
+                            '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />' +
+                        '</svg>' +
+                    '</button>' +
+                '</div>' +
+                '<input type="text" placeholder="Input Destination" id="destination" class="bg-neutral-200 focus:outline-none">' +
+            '</div>' +
+        '</div>');
+    }
+
+    function removeRoute() {
+        $("#route").remove();
     }
 
     var origin = new google.maps.places.Autocomplete(document.getElementById('origin'))
