@@ -16,6 +16,11 @@ class MainController extends Controller
         return view('authenticated-user.contents.about_us', $data);
     }
 
+    public function landing_page() {
+        $data = array();
+        return view('authenticated-user.contents.landing_page', $data);
+    }
+
     public function track_and_trace() {
         $data = array();
         return view('authenticated-user.contents.track_and_trace', $data);
