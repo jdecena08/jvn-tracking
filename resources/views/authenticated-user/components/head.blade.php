@@ -62,11 +62,12 @@ id="sidebar">
         </div>
 
         <div class="flex flex-col justify-center items-center py-2 font-small text-center text-sm font-bold text-white w-full divide-y divide-opacity-25 divide-white">
-            <a href="{{route('home')}}" id="book" class="px-4 py-2 text-center hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Book</a>
+            <!--<a href="{{route('home')}}" id="book" class="px-4 py-2 text-center hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Book</a>-->
+            <a href="{{route('about-us')}}" id="about-us" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Home</a>
             <a href="{{route('track-and-trace')}}" id="track-trace" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Track & Trace</a>
-            <a href="{{route('transaction-history')}}" id="transaction" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Transaction History</a>
-            <a href="{{route('about-us')}}" id="about-us" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">About Us</a>
-            <a href="{{route('help-page')}}" id="help" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Help</a>
+            <!--<a href="{{route('transaction-history')}}" id="transaction" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Transaction History</a>-->
+            
+            <!--<a href="{{route('help-page')}}" id="help" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Help</a>-->
         </div>
     </div>
 </aside>
