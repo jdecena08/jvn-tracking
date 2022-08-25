@@ -11,15 +11,11 @@
         <img src="{{asset('media/img/sample-5.png')}}" alt="vans" class="w-full">
 
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure!</p>
+            <p>Joint Venture National (JVN) offers a variety of services including web and application developing. JVN Tracking, one of JVN's byproducts, offers vehicle tracking services especially for Tour Agencies where they can track the JVN's van for hire—for them and their clients to know where the van/s are.</p>
         </div>
 
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure!</p>
-        </div>
-
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus. Consequatur, eligendi cupiditate? Consectetur, cupiditate fugiat nesciunt, veniam, commodi distinctio iusto sapiente molestias odit eligendi eos quae dolorem amet iure!</p>
+            <p>JVN was founded on 2017 and established on the same year. JVN strived developing websites, developing applications, and offering other services which made them more sufficient and reliable in this kind of job. JVN developed a lot of websites locally even internationally. JVN always giving all their knowledge and skills to reach and even exceed the clients expectations.</p>
         </div>
         <!--content ends here-->
     </div>

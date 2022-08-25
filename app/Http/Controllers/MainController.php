@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function index() {
+    /*public function index() {
         $data = array();
         return view('authenticated-user.contents.landing_page', $data);
+    }*/
+
+    public function index() {
+        $data = array();
+        return view('authenticated-user.contents.about_us', $data);
     }
 
     public function track_and_trace() {

@@ -25,10 +25,10 @@
             </button>
         </div>
         <div class="hidden md:flex flex-row justify-center items-center gap-4">
-            <a href="{{route('home')}}" id="book" class="text-left text-white hover:text-green-400 font-bold">Book</a>
+            <!--<a href="{{route('home')}}" id="book" class="text-left text-white hover:text-green-400 font-bold">Book</a>-->
+            <a href="{{route('about-us')}}" id="about-us" class="text-left text-white hover:text-green-400 font-bold">Home</a>
             <a href="{{route('track-and-trace')}}" id="track-trace" class="text-left text-white hover:text-green-400 font-bold">Track & Trace</a>
-            <a href="{{route('transaction-history')}}" id="transaction" class="text-left text-white hover:text-green-400 font-bold">Transaction History</a>
-            <a href="{{route('about-us')}}" id="about-us" class="text-left text-white hover:text-green-400 font-bold">About Us</a>
+            <!--<a href="{{route('transaction-history')}}" id="transaction" class="text-left text-white hover:text-green-400 font-bold">Transaction History</a>-->
         </div>
         <div class="flex flex-row justify-center items-center gap-4">
             @if(auth()->user())
