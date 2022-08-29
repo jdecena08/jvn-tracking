@@ -27,18 +27,14 @@
 @section('js')
 <!--script-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBob1PzXduiYD2CPfI-8v6PWoNqzr6Ty5E&callback=prepareMap"></script>
 <script>
     $(document).ready(function() {
         $("#track-trace").css('color', '#4ade80');
     });
 
-    var x = new google.maps.LatLng(14.1416642,121.218359)
-    var mapOptions = {
-        zoom: 13,
-        center: x
-    }
+    let map, infoWindow;
 
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     function beginTracking()
     {
@@ -71,13 +67,22 @@
                         })
                         past.setMap(map)
                         marker.setMap(null)
-                    }, 3000)
+                    }, 2500)
 
                 }).catch((error) => {
                     console.log(error.response.data)
                 })
             }, 5000);
 
+    }
+
+    function prepareMap()
+    {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center : {lat: 14.1861368, lng: 121.2740702},
+            zoom: 11
+        });
+        infoWindow = new google.maps.InfoWindow();
     }
 
 </script>
