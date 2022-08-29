@@ -34,7 +34,7 @@
 
     var x = new google.maps.LatLng(14.1416642,121.218359)
     var mapOptions = {
-        zoom: 10,
+        zoom: 18,
         center: x
     }
 
