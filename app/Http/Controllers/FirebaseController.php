@@ -89,7 +89,7 @@ class FirebaseController extends Controller
     {
         $plate_num = 'ZPU662';
 
-        $serviceAccount = (new Factory)->withServiceAccount(__DIR__.'/ljvn-tracking-354305-firebase-adminsdk-8u6z2-6d3ce22c0d.json');
+        $serviceAccount = (new Factory)->withServiceAccount(__DIR__.'/jvn-tracking-354305-firebase-adminsdk-8u6z2-6d3ce22c0d.json');
         $firebase = (new Factory)
         ->withServiceAccount($serviceAccount)
         ->withDatabaseUri('https://jvn-tracking-354305-default-rtdb.asia-southeast1.firebasedatabase.app')
