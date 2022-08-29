@@ -66,7 +66,7 @@ id="sidebar">
             <a href="{{route('about-us')}}" id="about-us" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Home</a>
             <a href="{{route('track-and-trace')}}" id="track-trace" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Track & Trace</a>
             <!--<a href="{{route('transaction-history')}}" id="transaction" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Transaction History</a>-->
-            
+
             <!--<a href="{{route('help-page')}}" id="help" class="px-4 py-2 hover:text-green-400 hover:bg-neutral-600 hover:bg-opacity-10 font-bold w-full">Help</a>-->
         </div>
     </div>
@@ -134,13 +134,13 @@ id="sidebar">
             <div class="flex flex-col modal-body relative py-4 px-8 gap-2">
                 <label for="signup-name">Name</label>
                 <input type="text" id="signup-name" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
-                
+
                 <label for="signup-email">Email</label>
                 <input type="email" id="signup-email" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
-                
+
                 <label for="signup-agency">Agency</label>
                 <input type="text" id="signup-agency" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
-                
+
                 <label for="signup-agency-address">Agency Business Address</label>
                 <input type="text" id="signup-agency-address" class="outline-none border border-emerald-600 rounded-md px-4 py-2">
 
@@ -164,7 +164,7 @@ id="sidebar">
                         <label for="signup-password">Password</label>
                         <input type="password" id="signup-password" class="outline-none border border-emerald-600 focus:ring-green-400 focus:ring-4 focus:ring-opacity-50 rounded-md px-4 py-2 container">
                     </div>
-                    
+
                     <div class="flex flex-col gap-2 w-full">
                         <label for="signup-confirm">Confirm Password</label>
                         <input type="password" id="signup-confirm" class="outline-none border border-emerald-600 focus:ring-green-400 focus:ring-4 focus:ring-opacity-50 rounded-md px-4 py-2 container">
@@ -193,23 +193,3 @@ id="sidebar">
     </div>
 </div>
 
-<script>
-    jQuery(window).on('scroll', function() {
-        if(jQuery(window).scrollTop() > 0) {
-            jQuery('#header-frame').css('opacity', '0.8');
-        }
-        else {
-            jQuery('#header-frame').css('opacity', '1');
-        }
-    });
-
-    $(document).scroll(function() {})
-
-    function toggleSidebar() {
-        jQuery('#sidebar').animate({
-            width: 'toggle'
-        });
-
-        jQuery('#bg-sidebar').fadeToggle();
-    }
-</script>

@@ -17,12 +17,12 @@
             background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23059669' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
-    
+
     @yield('css')
 
 </head>
 <body class="justify-center items-center w-full scroll-smooth diagonal-bg">
-    
+
     @include('authenticated-user.components.head')
     @yield('content')
 
@@ -36,9 +36,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
 
 <script>
-    jQuery(document).ready(function() {
-            jQuery(document).on("scroll", function() {
-                if (jQuery(document).scrollTop() > 0) {
+    $(document).ready(function() {
+            $(document).on("scroll", function() {
+                if ($(document).scrollTop() > 0) {
                     $("#header_frame").css('opacity', '0.8');
                 }
                 else {
@@ -49,9 +49,9 @@
         });
 
         function openSidebar() {
-            jQuery('#bg-sidebar').toggle();
-            jQuery('#sidebar').css('width', '65%');
-            jQuery('#sidebar').css('transition', 'width 1s');
+            $('#bg-sidebar').toggle();
+            $('#sidebar').css('width', '65%');
+            $('#sidebar').css('transition', 'width 1s');
         }
 </script>
 

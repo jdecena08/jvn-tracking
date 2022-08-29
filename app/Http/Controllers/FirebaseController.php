@@ -85,20 +85,20 @@ class FirebaseController extends Controller
         //
     }
 
-    public function getCurrentLocation()
+    public function getCurrentLocation(Request $request)
     {
-        $plate_num = 'ZPU662';
+        $plate_num = $request->plate_num;
         $firebase = (new Factory)
         ->withServiceAccount(__DIR__.'/jvn-tracking-354305-firebase-adminsdk-8u6z2-6d3ce22c0d.json')
-        ->withDatabaseUri('https://jvn-tracking-354305-default-rtdb.asia-southeast1.firebaseddatabase.app');
+        ->withDatabaseUri('https://jvn-tracking-354305-default-rtdb.asia-southeast1.firebasedatabase.app/');
 
         $database = $firebase->createDatabase();
 
-        $lat = $database->getReference('driverTrips/'.$plate_num.'/latitude')->getValue();
-        $lng = $database->getReference('driverTrips/'.$plate_num.'/longitude')->getValue();
+        $lat = $database->getReference('driverTrips/ZPU662/latitude')->getValue();
+        $lng = $database->getReference('driverTrips/ZPU662/longitude')->getValue();
 
         $data = array($lat, $lng);
 
-        dd($data);
+        return $data;
     }
 }
