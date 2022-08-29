@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
@@ -37,4 +38,6 @@ Route::get('admin-dashboard', [AdminController::class, 'admin_dashboard'])->name
 Route::get('driver-management', [AdminController::class, 'driver_management'])->name('driver-management');
 Route::get('vehicle-management', [AdminController::class, 'vehicle_management'])->name('vehicle-management');
 Route::get('trip-tickets', [AdminController::class, 'trip_tickets'])->name('trip-tickets');
+
+Route::get('test-data', [FirebaseController::class, 'getCurrentLocation'])->name('test-data');
 
