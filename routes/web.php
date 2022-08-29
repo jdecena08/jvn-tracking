@@ -33,6 +33,7 @@ Route::get('ticket-page', [MainController::class, 'ticket_page'])->name('ticket-
 Route::get('transaction-history', [MainController::class, 'transaction_history'])->name('transaction-history');
 Route::get('about-us', [MainController::class, 'about_us'])->name('about-us');
 Route::get('help-page', [MainController::class, 'help_page'])->name('help-page');
+Route::get('landing-page', [MainController::class, 'landing_page'])->name('landing-page');
 
 Route::get('admin-dashboard', [AdminController::class, 'admin_dashboard'])->name('admin-dashboard');
 Route::get('driver-management', [AdminController::class, 'driver_management'])->name('driver-management');

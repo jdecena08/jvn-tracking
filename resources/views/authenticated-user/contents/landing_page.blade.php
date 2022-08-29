@@ -191,27 +191,31 @@
     })
 
     function addRoute() {
-        $('#route_container').prepend('<div class="flex flex-col sm:flex-row justify-center items-center w-full sm:divide-x divide-emerald-600 gap-2 sm:gap-0" id="route">' +
-            '<div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">' +
-                '<label for="origin" class="text-left text-sm text-emerald-600 font-medium">Origin</label>' +
-                '<input type="text" placeholder="Input Origin" id="origin" class="bg-neutral-200 focus:outline-none">' +
-            '</div>' +
-            '<div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">' +
-                '<div class="flex flex-row justify-between items-center">' +
-                    '<label for="destination" class="text-left text-sm text-emerald-600 font-medium">Destination</label>' +
-                    '<button onclick="removeRoute()">' +
-                        '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600 hover:text-red-400" viewBox="0 0 20 20" fill="currentColor">' +
-                            '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />' +
-                        '</svg>' +
-                    '</button>' +
+        $('#route_container').prepend('<div class="hidden" id="route">' +
+            '<div class="flex flex-col sm:flex-row justify-center items-center w-full sm:divide-x divide-emerald-600 gap-2 sm:gap-0">' +
+                '<div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">' +
+                    '<label for="origin" class="text-left text-sm text-emerald-600 font-medium">Origin</label>' +
+                    '<input type="text" placeholder="Input Origin" id="origin" class="bg-neutral-200 focus:outline-none">' +
                 '</div>' +
-                '<input type="text" placeholder="Input Destination" id="destination" class="bg-neutral-200 focus:outline-none">' +
+                '<div class="flex flex-col px-2 py-1 bg-neutral-200 gap-1 w-full sm:w-1/2">' +
+                    '<div class="flex flex-row justify-between items-center">' +
+                        '<label for="destination" class="text-left text-sm text-emerald-600 font-medium">Destination</label>' +
+                        '<button onclick="removeRoute()">' +
+                            '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600 hover:text-red-400" viewBox="0 0 20 20" fill="currentColor">' +
+                                '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />' +
+                            '</svg>' +
+                        '</button>' +
+                    '</div>' +
+                    '<input type="text" placeholder="Input Destination" id="destination" class="bg-neutral-200 focus:outline-none">' +
+                '</div>' +
             '</div>' +
         '</div>');
+
+        $("#route").show('fast');
     }
 
     function removeRoute() {
-        $("#route").remove();
+        $("#route").hide('fast', function(){ $("#route").remove(); });
     }
 
     var origin = new google.maps.places.Autocomplete(document.getElementById('origin'))
