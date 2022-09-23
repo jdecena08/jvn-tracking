@@ -94,8 +94,8 @@ class FirebaseController extends Controller
 
         $database = $firebase->createDatabase();
 
-        $lat = $database->getReference('driverTrips/ZPU662/latitude')->getValue();
-        $lng = $database->getReference('driverTrips/ZPU662/longitude')->getValue();
+        $lat = $database->getReference('driverTrips/DAD2872/latitude')->getValue();
+        $lng = $database->getReference('driverTrips/DAD2872/longitude')->getValue();
 
         $data = array($lat, $lng);
 
